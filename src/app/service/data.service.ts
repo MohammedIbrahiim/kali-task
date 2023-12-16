@@ -9,7 +9,7 @@ export class DataService {
   dataUrl:string = '/assets/data/data.json'; // Path to your JSON file
   constructor(private _HttpClient:HttpClient) {
   }
-  getAllData(): Observable<ProductData>{
-   return this._HttpClient.get<ProductData>(this.dataUrl);
+  getAllData(): Observable<any>{
+   return this._HttpClient.get(this.dataUrl);
   }
 }
